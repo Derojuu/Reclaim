@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "./reclaim.css";
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --ink: #f8f9fa;
+  --panel: #ffffff;
+  --raised: #f1f3f5;
+  --line: rgba(0, 0, 0, 0.09);
+  --line-strong: rgba(0, 0, 0, 0.16);
+  --fg: #111827;
+  --fg-2: #374151;
+  --fg-3: #6b7280;
+  --fg-4: #9ca3af;
+  --shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.12);
+}
+
+/* Next.js smooth scroll support via data attribute */
+html[data-scroll-behavior="smooth"] {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: var(--sans);
+  background-color: var(--ink);
+  color: var(--fg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--ink);
+  color: var(--fg);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Consistent typography binding */
+.mono,
+[class*="mono"] {
+  font-family: var(--mono) !important;
+  font-feature-settings: "tnum" 1, "cv05" 1;
+}
